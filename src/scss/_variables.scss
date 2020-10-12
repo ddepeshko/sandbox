@@ -1,6 +1,7 @@
 /* Gray */
 $gray_100: #f4f4f4;
 $gray_400: #f8f9fa;
+$gray_500: #bababa;
 $gray_600: #707070;
 
 /* Black */
@@ -20,7 +21,7 @@ $green_700: #0d550d;
 /* Typography */
 $h1-color: $black;
 $text-def-color: $black_400;
-$text-secondary-color: $black_200;
+$text-secondary-color: $gray_500;
 $link-active-color: $green_700;
 $link-color: $green_400;
 $link-color-hover: $green_700;
@@ -41,6 +42,12 @@ $disabled-button-bg: $gray_400;
 $font-family-base: FiraSans, sens-serif;
 $header-bg-color: $gray_400;
 $body-bg-color: $gray_100;
+$product-item-border-color: $gray_500;
+$separator-bg: $gray_400;
+
+$status-new-bg: $green_400;
+$status-ref-bg: $gray_600;
+$status-used-bg: $red_400;
 
 
 

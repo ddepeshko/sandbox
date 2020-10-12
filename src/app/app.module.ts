@@ -1,11 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {HeaderModule} from './modules/system/header/header.module';
 import {HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {registerLocaleData} from '@angular/common';
+import localeRu from '@angular/common/locales/ru';
+
+import {HeaderModule} from './modules/system/header/header.module';
+
+registerLocaleData(localeRu);
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
     NgbModule,
     HeaderModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useFactory: () => 'ru'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

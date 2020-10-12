@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {IProduct} from '@models/product/product';
 
 @Component({
   selector: 'app-product-list-item',
@@ -6,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./product-list-item.component.scss']
 })
 export class ProductListItemComponent implements OnInit {
+  @Input() itemData: IProduct;
 
   constructor() {
   }

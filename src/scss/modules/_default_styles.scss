@@ -93,7 +93,7 @@ a {
   background: $white;
   border-radius: 10px;
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, .02);
-  height: calc(100vh - 177px);
+  min-height: calc(100vh - 177px);
 }
 
 .container {
