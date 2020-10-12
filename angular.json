@@ -29,8 +29,7 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
@@ -66,7 +65,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-test-task:build"
+            "browserTarget": "my-test-task:build",
+            "optimization": false,
+            "sourceMap": true,
+            "port": 4200
           },
           "configurations": {
             "production": {

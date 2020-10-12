@@ -1,0 +1,46 @@
+/* Gray */
+$gray_100: #f4f4f4;
+$gray_400: #C4C4C4;
+$gray_600: #707070;
+
+/* Black */
+$black: #000000;
+$black_200: #716f6f;
+$black_400: #343434;
+/* Red */
+$red_400: #D8034F;
+/* White */
+$white: #fff;
+/* Green */
+$green_100: #23f123;
+$green_400: #159715;
+$green_700: #0d550d;
+
+
+/* Typography */
+$h1-color: $black;
+$text-def-color: $black_400;
+$text-secondary-color: $black_200;
+$link-active-color: $green_700;
+$link-color: $green_400;
+$link-color-hover: $green_100;
+$link-back-color: $black;
+
+/* Form Fields */
+$label-color: $gray_600;
+$input-bg-color: $gray_400;
+$error-color: $red_400;
+
+/* Buttons */
+$btn-color: $white;
+$btn-primary-bg: $green_400;
+$btn-secondary-bg: $green_700;
+$disabled-button-bg: $gray_400;
+
+/* Custom variables */
+$font-family-base: FiraSans, sens-serif;
+$header-bg-color: $gray_400;
+$body-bg-color: $gray_100;
+
+
+
