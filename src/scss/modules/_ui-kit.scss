@@ -1,0 +1,69 @@
+/** Dropdown styles */
+
+.dropdown-toggle {
+  border-radius: 20px;
+  background: $btn-secondary-bg;
+  padding: 8px 24px;
+  color: $white;
+  border: 1px solid $btn-secondary-bg;
+
+  &::after {
+    display: none;
+  }
+
+  .text {
+    padding-right: 10px;
+  }
+
+  .icon {
+    svg * {
+      fill: $white;
+    }
+  }
+}
+
+.dropdown-menu {
+  padding: 8px;
+}
+
+.dropdown-item {
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+
+  & + .dropdown-item {
+    margin-top: 4px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active, &:active {
+    background: $btn-secondary-bg;
+
+
+  }
+}
+
+
+/** Buttons style */
+.btn {
+  &:focus, &.focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.btn-dropdown {
+    &:hover {
+      color: $btn-secondary-bg;
+      background: $white;
+
+      .icon {
+        svg * {
+          fill: $btn-secondary-bg;
+        }
+      }
+    }
+  }
+}
