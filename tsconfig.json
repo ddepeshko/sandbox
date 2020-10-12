@@ -19,26 +19,20 @@
       "dom"
     ],
     "paths": {
-      "@app/constants": [
-        "src/app/constants"
+      "@constants/*": [
+        "src/app/constants/*"
       ],
-      "@app/classes": [
-        "src/app/classes"
+      "@models/*": [
+        "src/app/models/*"
       ],
-      "@app/directives": [
-        "src/app/directives"
+      "@services/*": [
+        "src/app/services/*"
       ],
-      "@app/models/*": [
-        "src/app/models"
+      "@app/validators/*": [
+        "src/app/validators/*"
       ],
-      "@app/services/*": [
-        "src/app/services"
-      ],
-      "@app/validators": [
-        "src/app/validators"
-      ],
-      "@app/modules": [
-        "src/app/modules"
+      "@app/modules/*": [
+        "src/app/modules/*"
       ]
     },
     "allowSyntheticDefaultImports": true
