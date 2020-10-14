@@ -97,5 +97,8 @@ a {
 }
 
 .container {
-  padding-bottom: 24px;
+
+  &.container-content {
+    padding-bottom: 24px;
+  }
 }

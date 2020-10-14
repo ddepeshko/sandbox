@@ -1,0 +1,32 @@
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ProductService} from '@services/product.service';
+
+@Component({
+  selector: 'app-delete-acceptance-modal',
+  templateUrl: './delete-acceptance-modal.component.html',
+  styleUrls: ['./delete-acceptance-modal.component.scss']
+})
+export class DeleteAcceptanceModalComponent implements OnInit {
+  @Input() id: number;
+  @Output() isDeleted = new EventEmitter();
+
+  constructor(private modal: NgbModal, private productService: ProductService) {
+  }
+
+  ngOnInit(): void {
+  }
+
+  close() {
+    this.modal.dismissAll();
+  }
+
+  submitDeletion() {
+    this.productService.deleteProductItem(this.id).subscribe(() => {
+      this.isDeleted.emit();
+      this.close();
+    }, error => {
+      console.log(error);
+    });
+  }
+}

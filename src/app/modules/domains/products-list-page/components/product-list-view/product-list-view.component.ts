@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {IProduct} from '@models/product/product';
 import {PRODUCT_LIST_MOCK} from '@constants/products-list-mock';
+import {ProductService} from '@services/product.service';
 
 @Component({
   selector: 'app-product-list-view',
@@ -9,10 +10,21 @@ import {PRODUCT_LIST_MOCK} from '@constants/products-list-mock';
 })
 export class ProductListViewComponent implements OnInit {
   products: Array<IProduct> = PRODUCT_LIST_MOCK;
-  constructor() {
+
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
+    this.getProductList();
   }
 
+  getProductList() {
+    this.productService.getProductsList().subscribe((data) => {
+      this.products = data;
+    });
+  }
+
+  updateProductList() {
+    this.getProductList();
+  }
 }

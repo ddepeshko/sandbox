@@ -18,6 +18,11 @@ const routes: Routes = [
       .then((m) => m.ProductAddPageModule),
   },
   {
+    path: 'product-list/edit/:id',
+    loadChildren: () => import('./modules/domains/product-add-page/product-add-page.module')
+      .then((m) => m.ProductAddPageModule),
+  },
+  {
     path: 'product-list',
     loadChildren: () => import('./modules/domains/products-list-page/products-list-page.module')
       .then((m) => m.ProductsListPageModule),

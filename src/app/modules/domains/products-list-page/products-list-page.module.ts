@@ -5,13 +5,15 @@ import {ProductListItemComponent} from './components/product-list-item/product-l
 import {ProductListViewComponent} from './components/product-list-view/product-list-view.component';
 import {ProductListPageRoutingModule} from './product-list-page-routing.module';
 import {ProductStatusComponent} from './components/product-status/product-status.component';
+import {NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [ProductsListPageComponent, ProductListItemComponent, ProductListViewComponent, ProductStatusComponent],
   imports: [
     CommonModule,
-    ProductListPageRoutingModule
+    ProductListPageRoutingModule,
+    NgbTooltipModule
   ]
 })
 export class ProductsListPageModule {
