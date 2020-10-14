@@ -114,6 +114,22 @@
       }
     }
   }
+
+  &.btn-go-back {
+    padding: 0 25px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: $text-secondary-color;
+    background: $white;
+    border-color: $text-secondary-color;
+
+    &:hover {
+      color: $white;
+      background: $text-secondary-color;
+      border-color: $white;
+    }
+  }
 }
 
 

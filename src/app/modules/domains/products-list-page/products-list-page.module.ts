@@ -10,6 +10,9 @@ import {NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [ProductsListPageComponent, ProductListItemComponent, ProductListViewComponent, ProductStatusComponent],
+  exports: [
+    ProductStatusComponent
+  ],
   imports: [
     CommonModule,
     ProductListPageRoutingModule,
