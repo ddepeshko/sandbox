@@ -2,13 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {IProduct} from '@models/product/product';
 import {ActivatedRoute} from '@angular/router';
 import {ProductService} from '@services/product.service';
+import {IProductData} from '@models/product/product-data';
 
 @Component({
   selector: 'app-product-view-page',
   templateUrl: './product-view-page.component.html',
   styleUrls: ['./product-view-page.component.scss']
 })
-export class ProductViewPageComponent implements OnInit {
+export class ProductViewPageComponent implements OnInit, IProductData {
   productData: IProduct;
   productId: number;
 
