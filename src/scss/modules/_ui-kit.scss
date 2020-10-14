@@ -41,14 +41,12 @@
 
   &.active, &:active {
     background: $btn-secondary-bg;
-
-
   }
 }
 
 
 /** Buttons style */
-.btn {
+.btn, button {
   padding: 8px 24px;
 
   &[disabled] {

@@ -13,28 +13,26 @@ export class AppInterceptor implements HttpInterceptor {
     if (req.method === 'GET' && req.url === `${api.products.baseUrl}${api.products.productList}`) {
       console.log('Loaded from JSON: ' + req.url);
       return of(new HttpResponse({status: 200, body: this.listOfProducts}));
+
     } else if (req.method === 'POST' && req.url === `${api.products.baseUrl}${api.products.productAddEdit}`) {
       console.log('Loaded from JSON: ' + req.url);
       this.listOfProducts = [...this.listOfProducts, req.body];
       return of(new HttpResponse({status: 200, body: this.listOfProducts}));
+
     } else if (req.method === 'DELETE') {
       console.log('Loaded from JSON: ' + req.url);
-      let idx = req.url.lastIndexOf('/');
-      let id = Number(req.url.slice(idx + 1));
+      let id = this.getCurrentId(req.url);
       this.listOfProducts = this.listOfProducts.filter(el => el.id !== id);
       return of(new HttpResponse({status: 200, body: this.listOfProducts}));
+
     } else if (req.method === 'GET' && req.url.includes('/product/')) {
-      let idx = req.url.lastIndexOf('/');
-      let id = Number(req.url.slice(idx + 1));
+      let id = this.getCurrentId(req.url);
       let product = this.listOfProducts.find(el => el.id === Number(id));
       return of(new HttpResponse({status: 200, body: product}));
 
     } else if (req.method === 'PUT' && req.url.includes('/product-add')) {
       this.listOfProducts = this.listOfProducts.map(el => {
-        console.log(el.id);
-        console.log(req.body.id);
         if (el.id === req.body.id) {
-          console.log('sss');
           el = req.body;
         }
         return el;

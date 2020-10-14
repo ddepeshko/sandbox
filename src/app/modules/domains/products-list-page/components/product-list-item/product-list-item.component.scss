@@ -6,6 +6,9 @@
   border: 1px solid $product-item-border-color;
   padding: 12px 8px;
   @include trans();
+  height: 100%;
+  @include flex-container(column, space-between, flex-start);
+
 
   &:hover {
     cursor: pointer;
@@ -16,6 +19,7 @@
 .item-image {
   overflow: hidden;
   @include flex-container(row, center, center);
+  height: 255px;
 }
 
 .item-title {
@@ -46,4 +50,10 @@
 .controls-wrapper {
   margin-top: 12px;
   @include flex-container(row, space-between, center);
+  width: 100%;
+}
+
+:host {
+  display: block;
+  height: 100%;
 }
